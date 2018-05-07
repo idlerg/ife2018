@@ -1,0 +1,184 @@
+/*样式重置*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+	font-family: "Microsoft YaHei",simSun, "Lucida Grande","Lucida Sans Unicode", Arial;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+
+/* remember to define focus styles! */
+
+:focus {
+	outline: 0;
+}
+
+
+/* remember to highlight inserts somehow! */
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Resetting HTML5! */
+
+section,
+article,
+aside,
+header,
+footer,
+nav,
+dialog,
+figure {
+	display: block;
+}
+/* i,em标签的默认字体样式 */
+i,em{
+	font-style: normal;
+}
+
+
+/*页面模板 */
+.w{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* 浮动 */
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/
+}
+
+/*去掉a标签默认的下划线 */
+a{
+	text-decoration: none;
+}
+
+/* placeholder  style */
+::-webkit-input-placeholder{
+    color: #999999;
+    font-size: 12px;
+}
+::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color: #999999;
+    font-size: 12px;
+}
+:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color: #999999;
+    font-size: 12px;
+}
+:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color: #999999;
+    font-size: 12px;
+}
