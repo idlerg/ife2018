@@ -5,12 +5,6 @@
 		<title></title>
 		<link rel="stylesheet" href='../../commons/css/rease.css'>
 		<link rel="stylesheet" href="../css/index.css">
-		<style>
-			img{
-				width: 100px;
-				height: 100px;
-			}
-		</style>
 	</head>
 	<body>
 		<section id="box1">
@@ -19,8 +13,8 @@
 				<img src="../../commons/image/day_01_header.jpg" alt="" srcset="">
 				<dl>
 					<dt>个人说明</dt>
-					<dt>我有较强的科学研究和动手能力，精通C\C++编程语言及MFC编程框架，并熟练运用VC++6.0\VS2008等软件进行相关工作。对Socket套接字编程有一定的了解，编写过聊天室类软件。熟悉OpenGL图形编程开发，并有相关项目经验。</dt>
-					<dt>本人为人踏实、勤奋，严格要求自己，工作积极，一丝不苟，对新事物有较强的接受能力。对自己已掌握的技术敢于创新，精益求精，能够妥善的处理周围的人际关系，团结同事，并具有极强的团队合作精神。</dt>
+					<dd>我有较强的科学研究和动手能力，精通C\C++编程语言及MFC编程框架，并熟练运用VC++6.0\VS2008等软件进行相关工作。对Socket套接字编程有一定的了解，编写过聊天室类软件。熟悉OpenGL图形编程开发，并有相关项目经验。</dd>
+					<dd>本人为人踏实、勤奋，严格要求自己，工作积极，一丝不苟，对新事物有较强的接受能力。对自己已掌握的技术敢于创新，精益求精，能够妥善的处理周围的人际关系，团结同事，并具有极强的团队合作精神。</dd>
 				</dl>
 			</div>
 		</section>	
@@ -54,12 +48,12 @@
 		<section id="box3">
 			<div>
 				<h2>工作经验</h2>
-				<ul>
+				<ul class="company">
 					<li>公司1</li>
 					<li>公司2</li>
 					<li>公司3</li>
 				</ul>
-				<ol>
+				<ol class="perject">
 					<li>
 						<h3>项目名称1</h3>
 						<ul>
@@ -87,8 +81,10 @@
 							<li>具体职责：巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</li>
 						</ul>	
 					</li>
-				</ol>
-			</div>
+				</ol>			</div>
+		
+		</section>	
+		<section id="box4">	
 			<div>
 				<h2>兴趣爱好</h2>
 				<p>巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</p>
@@ -100,8 +96,46 @@
 				<ul>
 					<li>手机：188 8888 8888 </li>
 					<li>邮箱：123456789@qq.com</li>
+					<li>我的博客：<a href="https://github.com/betrayalFan">点击进入我的博客</a></li>
 				</ul>	
 			</div>
 		</section>
+		<ul class="asideList">
+			<li>壹</li>
+			<li>贰</li>
+			<li>叁</li>
+			<li>肆</li>
+		</ul>
 	</body>
+	<script type="text/javascript">
+		var ulNode = document.getElementsByClassName("asideList")[0];
+		//console.log(ulNode);
+
+		var lis = ulNode.getElementsByTagName("li");
+		//console.log(lis)
+
+		var  secNode = document.getElementsByTagName("section");
+		//console.log(secNode)
+ 
+		//console.log(lis.length)
+
+		//遍历节点并为每个节点添加点击事件
+		for (let i = 0; i < lis.length; i++) {
+			lis[i].index = i;
+			lis[i].onclick = function () { 
+				//console.log(this.index)
+				for (let j = 0; j < secNode.length; j++) {
+					secNode[j] = j
+					if ( i == j) {
+						secNode[j].style.display = "block";
+					}else{
+						secNode[j].style.display = "none";
+					}
+				}
+				
+			}
+			
+		}
+		
+	</script>
 </html>
