@@ -31,7 +31,7 @@ section div h2 {
   margin-top: 60px;
 }
 
-section#box1 {
+#box1 {
   background: greenyellow;
 }
 
@@ -47,7 +47,7 @@ section#box1 {
   }
 }
 
-section#box1 h1 {
+#box1 h1 {
   font: bold 200% Consolas,Monaco,monospace;
   border-right: .1em solid;
   width: 16.5em;
@@ -59,115 +59,115 @@ section#box1 h1 {
   font-size: 40px;
 }
 
-section#box1 img {
+#box1 img {
   width: 160px;
   height: 160px;
   display: block;
   margin: 0 auto 5em;
 }
 
-section#box1 dl {
+#box1 dl {
   display: block;
   width: 100%;
 }
 
-section#box1 dl dt {
+#box1 dl dt {
   font-size: 22px;
   margin-bottom: 14px;
 }
 
-section#box1 dl dd {
+#box1 dl dd {
   margin-bottom: 10px;
   line-height: 28px;
 }
 
-section#box2 {
+#box2 {
   display: none;
   background: hotpink;
 }
 
-section#box2 ul {
+#box2 ul {
   display: block;
   width: 100%;
 }
 
-section#box2 ul li {
+#box2 ul li {
   line-height: 26px;
   color: aqua;
 }
 
-section#box2 ol {
+#box2 ol {
   display: block;
   width: 100%;
 }
 
-section#box2 ol li {
+#box2 ol li {
   width: 70%;
   list-style: square;
   line-height: 30px;
   color: aqua;
 }
 
-section#box2 span {
+#box2 span {
   line-height: 30px;
   color: aqua;
 }
 
-section#box3 {
+#box3 {
   display: none;
   background: lightskyblue;
 }
 
-section#box3 ul.company {
+#box3 ul.company {
   display: block;
   width: 100%;
   height: 60px;
   line-height: 60px;
 }
 
-section#box3 ul.company li {
+#box3 ul.company li {
   float: left;
   padding: 0 40px;
   color: hotpink;
 }
 
-section#box3 .perject {
+#box3 .perject {
   margin-top: 60px;
 }
 
-section#box3 .perject h3 {
+#box3 .perject h3 {
   margin: 30px;
   font-size: 18px;
 }
 
-section#box3 .perject ul li {
+#box3 .perject ul li {
   list-style: circle;
   line-height: 30px;
   color: hotpink;
 }
 
-section#box4 {
+#box4 {
   display: none;
   background: mediumpurple;
 }
 
-section#box4 h2 {
+#box4 h2 {
   margin-bottom: 40px;
 }
 
-section#box4 p {
+#box4 p {
   line-height: 40px;
   color: greenyellow;
   display: block;
 }
 
-section#box4 ul li {
+#box4 ul li {
   line-height: 40px;
   color: greenyellow;
   display: block;
 }
 
-section#box4 ul li a {
+#box4 ul li a {
   color: hotpink;
 }
 

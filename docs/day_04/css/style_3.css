@@ -1,0 +1,89 @@
+body {
+    background: #f7f7f7;
+}
+
+section {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    background: #ffffff;
+    overflow: auto;
+}
+
+section .main > div {
+    height: 100px;
+    border-bottom: 1px solid #666;
+    width: 100%;
+}
+
+section .main div h2 {
+    float: left;
+    width: 12%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 18px;
+    text-align: center;
+    background: lightgrey;
+    margin: 0;
+}
+
+section .main div h3{
+    margin: 0;
+    float: left;
+    line-height: 30px;
+    font-size: 16px;
+    width: 8%;
+}
+section .main div p{
+    float: left;
+    display: block;
+    width: 92%;
+    line-height: 30px;
+    margin: 0;
+}
+section div .info,
+section div .contact,
+section div .content{
+    overflow: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 88%;
+    float: left;
+    line-height: 100px;
+    box-sizing: border-box;
+    padding-left: 30px;   
+}
+section div .content{
+    padding-top: 20px;
+}
+
+section div .info li,
+section div .contact li {
+    float: left;
+    margin-right: 40px;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+section div .info li em,
+section div .contact li em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+section h1 {
+    width: 100%;
+    font-size: 24px;
+    background: grey;
+    margin: 0;
+    color: #fff;
+    line-height: 80px;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+section .main {
+    float: left;
+    width: 100%;
+}

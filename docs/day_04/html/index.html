@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>三种简历</title>
+	<link rel="stylesheet" href="../css/style_1.css">
+	<style>
+		body {
+			position: relative;			
+		}
+		aside {
+			position: absolute;
+			top: 0;
+			left: 110px;
+			width: 180px;
+			height: 40px;
+			line-height: 40px;
+			color: #fff;
+			background: red;
+			border: 1px solid #666;
+			border-radius: 4px;
+			cursor: pointer;
+			text-align: center;
+		}
+		#tapText{
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		aside ul {
+			display: none;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			background: lawngreen;
+			box-sizing: border-box;
+		}
+		aside ul li {			
+			width: 100%;
+			line-height: 40px;
+			text-align: center;
+			list-style: none;
+			cursor: pointer;
+			color: #000;
+		}
+		aside ul li:hover{
+			background: orchid;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<aside>
+		<div id="tap">
+			<p id="tapText">简历主题切换</p>
+			<ul>
+				<li>第一种简历</li>
+				<li>第二种简历</li>
+				<li>第三种简历</li>
+			</ul>
+		</div>
+	</aside>
+    <section>
+        <h1>简历</h1>
+        <div class="main">
+            <div>
+                <h2>基本信息</h2>
+                <ul class="info">
+                    <li><em>姓名：</em>张三</li>
+                    <li><em>性别：</em>女</li>
+                    <li><em>应聘职位</em>Web前端工程师</li>
+                </ul>
+            </div>
+            <div>
+                <h2>联系方式</h2>
+                <ul class="contact">
+                    <li><em>手机：</em>234567890</li>
+                    <li><em>Email：</em>345678905@qq.com</li>
+                    <li>
+                        <em>个人主页：</em>
+                        <a href="https://github.com/betrayalFan">Github</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>能力描述</h2>
+                <div class="content">
+                    <h3>技术能力</h3>
+                    <p>熟练掌握HTML CSS JavaScript</p>
+                    <h3>综合能力</h3>
+                    <p>良好的沟通，主动积极，努力勤奋</p>
+                </div>    
+            </div>
+            <div>
+                <h2>教育精力</h2>
+                <div class="content">
+                    <h3>本科</h3>
+                    <p>百度前端技术学院小伟学院</p>
+                    <h3>研究生</h3>
+                    <p>百度前端技术学院大斌学院</p>
+                </div>    
+            </div>
+            <div>
+                <h2>项目经历</h2>
+                <div class="content">
+                    <h3>小度小度</h3>
+                    <p>作为前端工程师角色参与了ABC组件的开发</p>
+                    <h3>SAN Doc</h3>
+                    <p>作为文档工程师参与了SAN Doc编写</p>
+                </div>
+            </div>
+        </div>    
+    </section>
+</body>
+<script type="text/javascript">
+	var aside = document.getElementById("tap");
+	var asideUl = aside.getElementsByTagName("ul")[0];
+	var asideLi = asideUl.getElementsByTagName("li");
+	var tapText = document.getElementById("tapText");
+
+	//获得页面CSS文件路径
+	var head = document.getElementsByTagName('head')[0];
+    var link = head.getElementsByTagName('link')[0];
+    
+
+
+
+	aside.onclick = function () { 
+		asideUl.style.display = "block";
+	}
+
+	for( var i = 0; i < asideLi.length; i++ ){
+		asideLi[i].index = i + 1;
+		asideLi[i].onclick = function(ev){
+			//阻止事件冒泡
+			var oEvent = ev || event;
+			oEvent.stopPropagation();
+
+			//父级隐藏
+			asideUl.style.display = "none";
+
+			//修改指示文字
+			var html = this.innerHTML;
+			tapText.innerHTML = html;
+
+			//修改页面CSS加载的文件
+			var path = "../css/style_"+ this.index +".css";
+			link.href = path;	
+		}				
+	}
+
+
+</script>
+</html>

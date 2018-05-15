@@ -1,0 +1,41 @@
+body {
+  background: #f7f7f7;
+}
+
+section {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 20px 40px;
+}
+
+section div {
+  margin-bottom: 40px;
+}
+
+section div .info,
+section div .contact {
+  overflow: auto;
+  display: block;
+  padding: 0;
+}
+
+section div .info li,
+section div .contact li {
+  float: left;
+  margin-right: 40px;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+section div .info li em,
+section div .contact li em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+section h1 {
+  font-size: 34px;
+}
