@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.section{
+    width: 100%;
+}
+.section .box1{
+    width: 100%;
+    height: 990px;
+    background: url(../images/bg1.png) no-repeat center center/100% 100%;
+}
+
+.section .box1 .main{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
