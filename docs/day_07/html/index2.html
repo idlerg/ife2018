@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/index2.css" />
+</head>
+
+<body>
+	<header class="header">
+		<div class="main clearfix">
+			<div class="logo fl">logo</div>
+			<ul class="clearfix fr">
+				<li>
+					<a href="javascript:;">Home</a>
+				</li>
+				<li>
+					<a href="javascript:;">One</a>
+				</li>
+				<li>
+					<a href="javascript:;">Two</a>
+				</li>
+				<li>
+					<a href="javascript:;">Three</a>
+				</li>
+			</ul>
+		</div>
+
+	</header>
+	<div class="banner">
+		这是banner区域
+		<ul class="clearfix">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	<section class="section">
+		<nav class="nav">
+			<ul class="clearfix navBox">
+				<li class="active">导航栏1</li>
+				<li>导航栏2</li>
+				<li>导航栏3</li>
+				<li>导航栏4</li>
+				<li>导航栏5</li>
+			</ul>
+		</nav>
+		<div class="main">
+			<article class="item1">
+				内容1
+			</article>
+			<article class="item2">
+				内容2
+			</article>
+			<article class="item3">
+				内容3
+			</article>
+			<article class="item4">
+				内容4
+			</article>
+		</div>
+
+	</section>
+
+	<footer class="footer">这是footer部分</footer>
+
+
+</body>
+<!-- <script>
+	var oNav = document.getElementsByClassName("navBox")[0];
+	var oNavLi = oNav.getElementsByTagName("li");
+
+	for (let i = 0; i < oNavLi.length; i++) {
+		oNavLi[i].onclick = function () {
+			console.log(oNavLi[i])
+			this.classList.add("active");
+		}
+	}
+
+	function siblings(elm) {
+		var a = [];
+		var p = elm.parentNode.children;
+		for (var i = 0, pl = p.length; i < pl; i++) {
+			if (p[i] !== elm) a.push(p[i]);
+		}
+		return a;
+	}
+</script> -->
+
+</html>

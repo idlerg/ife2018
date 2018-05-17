@@ -1,0 +1,141 @@
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+
+body{
+    width: 100%;
+    background: lightgray;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 300px;
+}
+.header{
+    height: 120px;
+    background: orange;
+    margin: 0 auto;
+}
+.header .main{
+    width: 960px;
+    height: 120px;
+    background: limegreen;
+    margin: 0 auto;
+}
+
+.header .main .logo{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: lightcoral;
+    float: left;
+}
+.header ul{
+    width: calc(100% - 160px);
+    background: lavenderblush;
+}
+
+.header ul li{
+    float: left;
+    list-style: none;
+    width: 25%;
+}
+
+.banner{
+    width: 100%;
+    height: 200px;
+    margin: 20px auto;
+    background: gold;
+    position: relative;
+}
+
+.banner ul {
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+
+.banner ul li{
+    float: left;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: orchid;
+    color: #fff;
+    margin-right: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+.banner ul li:hover{
+    background: darkorchid;
+}
+
+.section{
+    width: 100%;
+    background: fuchsia;
+}
+.section .nav{
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid gray;
+}
+
+.section .nav ul{
+    width: 960px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    background: lavenderblush;
+    display: flex;
+    cursor: pointer;
+    padding: 0;
+}
+
+.section .nav ul li:hover{
+    background: lightblue;
+}
+
+.section .nav ul li.active{
+    background: lime;
+}
+
+.section .nav ul li{
+    flex: 1;
+    float: left;
+    list-style: none;
+}
+.section .main{
+    display: flex;
+}
+.section .main article{
+    flex: 1 1 auto;
+    height: 200px;
+    background: salmon;
+    box-sizing: border-box;
+    padding: 80px;
+}
+
+.section .main article.item2,
+.section .main article.item4{
+    background: aqua;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    background: slateblue;
+}

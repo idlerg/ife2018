@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="../css/index1.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<ul id="aside">
+			<li class="active">实现一个两栏布局，左侧占30%宽度，右侧占70%宽度</li>
+			<li>实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化</li>
+			<li>实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化</li>
+			<li>实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化</li>
+			<li>实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化</li>
+		</ul>
+		<section class="box box1">
+			<div class="main item1 clearfix">
+				<div class="fl left">float左侧30%</div>
+				<div class="fr right">float右侧70%</div>
+			</div>
+			<div class="main item2">
+				<div class="left">position左侧30%</div>
+				<div class="right">position右侧70%</div>
+			</div>
+
+
+
+		</section>
+
+		<section class="box box2">
+			<div class="main item1 clearfix">
+				<div class="fl left">float左侧固定200px</div>
+				<div class="fr right">float右侧自适应(100%-200px)</div>
+			</div>
+			<div class="main item2">
+				<div class="left">双inline-block左侧固定200px</div>
+				<div class="right">双inline-block右侧自适应(100%-200px)</div>
+			</div>
+			<div class="main item3 clearfix">
+				<div class="left">单个float+margin-left、position（同理）左侧固定200px</div>
+				<div class="right">单个float+margin-left、position（同理）右侧自适应(100%-200px)</div>
+			</div>
+			<div class="main item4">
+				<div class="left">flact + BFC左侧固定</div>
+				<div class="right">flact + BFC右侧自适应</div>
+			</div>
+			<div class="main item5">
+				<div class="left">flex左侧固定</div>
+				<div class="right">flex右侧自适应</div>
+			</div>
+
+		</section>
+
+		<section class="box box3">
+			<div class="main clearfix">
+				<div class="fl left">左侧自适应(100%-200px)</div>
+				<div class="fr right">右侧固定200px</div>
+			</div>
+
+		</section>
+
+		<section class="box box4">
+			<div class="main clearfix">
+				<div class="fl left">左侧固定200px</div>
+				<div class="fl middle">中间自适应(100%-200px)</div>
+				<div class="fr right">右侧固定200px</div>
+			</div>
+
+		</section>
+
+		<section class="box box5">
+			<div class="main clearfix">
+				<div class="fl left">左侧固定200px</div>
+				<div class="fl middle">中间固定200px</div>
+				<div class="fr right">右侧自适应(100%-200px)</div>
+			</div>
+
+		</section>
+	</div>
+
+
+</body>
+<script>
+	var oAside = document.getElementById("aside");
+	var oAsideLi = oAside.getElementsByTagName("li");
+	var oBox = document.getElementsByClassName("box");
+
+	for (let i = 0; i < oAsideLi.length; i++) {
+
+		oAsideLi[i].onclick = function () {
+
+			for (let j = 0; j < oBox.length; j++) {
+				oBox[j].style.display = "none";
+
+				if (i == j) {
+					oBox[j].style.display = "block";
+				}
+
+			}
+		}
+	}
+</script>
+
+</html>
