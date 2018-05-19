@@ -431,6 +431,16 @@ h2 {
     outline: none;
 }
 
+.box7 .main div.right{
+    box-sizing: border-box;
+    padding-top: 90px;
+} 
+.box7 .main div.right h3{
+    line-height: 70px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
 .footer {
     width: 100%;
     height: 445px;
@@ -461,10 +471,34 @@ h2 {
 }
 
 .footer .main .help_nav ul li {
+    font-size: 12px;
     line-height: 40px;
     list-style: none;
+    color: #757575;
 }
 
 .help_cover {
     width: 200px;
+}
+.help_cover p{
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 20px;
+    line-height: 32px;
+    color: #757575;
+}
+
+.help_cover span {
+    display: block;
+    width: 100%;
+    height: 26px;
+    margin-top: 30px;
+}
+.help_cover span i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #6c6863;
 }
