@@ -372,7 +372,60 @@ h2 {
     list-style: none;
     margin-bottom: 30px;
     cursor: pointer;
+    position: relative;
 }
+.box6 .main li:hover .pop{
+    height: 340px;
+    transition: all 1s;
+}
+.box6 .main .pop{
+    width: 470px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+.box6 .main .pop h5{
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.box6 .main .pop p{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color:#888;
+}
+.box6 .main .pop span{
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+.box6 .main .pop span i{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #888;
+    margin-right: 30px;
+}
+.box6 .main .pop span i.fb{
+    background: url(../images/icon01_fb.png) no-repeat center center;
+}   
+.box6 .main .pop span i.gz{
+    background: url(../images/icon02_gz.png) no-repeat center center;
+} 
+.box6 .main .pop span i.xj{
+    background: url(../images/icon03_xj.png) no-repeat center center;
+} 
 
 .box7 {
     width: 100%;
@@ -432,6 +485,7 @@ h2 {
 }
 
 .box7 .main div.right{
+    width: 32%;
     box-sizing: border-box;
     padding-top: 90px;
 } 
@@ -439,8 +493,51 @@ h2 {
     line-height: 70px;
     font-size: 36px;
     font-weight: 300;
+    margin-bottom: 30px;
 }
 
+.box7 .main div.right p{
+    width: 100%;
+    line-height: 30px;
+    font-size: 14px;
+    color: #555555;
+}
+.box7 .main div.right ul{
+    display: block;
+    margin-top: 50px;
+}
+.box7 .main div.right ul li{
+    list-style: none;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 60px;
+    margin-bottom: 20px;
+}
+.box7 .main div.right ul li i{
+    display: block;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.box7 .main div.right ul li i.dz{
+    background: url(../images/icon04_dz.png) no-repeat center center;
+} 
+.box7 .main div.right ul li i.dh{
+    background: url(../images/icon05_dh.png) no-repeat center center;
+} 
+.box7 .main div.right ul li i.yx{
+    background: url(../images/icon06_yx.png) no-repeat center center;
+} 
+.box7 .main div.right ul li span{
+    width: 70%;
+    line-height: 30px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
 .footer {
     width: 100%;
     height: 445px;
