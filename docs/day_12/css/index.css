@@ -1,9 +1,10 @@
-body{
+body {
     width: 100%;
     height: 100%;
     position: relative;
 }
-.leftAside{
+
+.leftAside {
     width: 100px;
     height: 100%;
     background: #1d2531;
@@ -11,14 +12,16 @@ body{
     top: 0;
     left: 0;
 }
-.leftAside .icon_top{
+
+.leftAside .icon_top {
     position: fixed;
     top: 0;
     left: 0;
     width: 100px;
     overflow: hidden;
 }
-.leftAside .icon_top i{
+
+.leftAside .icon_top i {
     display: block;
     width: 60px;
     height: 60px;
@@ -27,20 +30,25 @@ body{
     margin: 20px auto 0;
     cursor: pointer;
 }
-.leftAside .icon_top i.fj{
+
+.leftAside .icon_top i.fj {
     background: #289df5 url(../images/item_01.png) no-repeat center center;
 }
-.leftAside .icon_top i.gj{
+
+.leftAside .icon_top i.gj {
     background: #9481e4 url(../images/item_02.png) no-repeat center center;
 }
-.leftAside .icon_top i.yx{
+
+.leftAside .icon_top i.yx {
     background: #ef4f33 url(../images/item_03.png) no-repeat center center;
 }
-.leftAside .icon_top i.add{
+
+.leftAside .icon_top i.add {
     border: 4px solid #2d3848;
     background: #1d2531 url(../images/item_04.png) no-repeat center center;
 }
-.leftAside .icon_bottom{
+
+.leftAside .icon_bottom {
     width: 100px;
     height: 16px;
     position: fixed;
@@ -48,25 +56,30 @@ body{
     bottom: 20px;
     text-align: center
 }
-.leftAside .icon_bottom i{
+
+.leftAside .icon_bottom i {
     display: inline-block;
     width: 16px;
     height: 16px;
 }
-.leftAside .icon_bottom i.grid{
+
+.leftAside .icon_bottom i.grid {
     margin-right: 14px;
     background: url(../images/grid.png) no-repeat;
 }
-.leftAside .icon_bottom i.settings{
+
+.leftAside .icon_bottom i.settings {
     background: url(../images/settings.png) no-repeat;
 }
-#wrapper{
+
+#wrapper {
     width: calc(100% - 100px);
     height: 2000px;
     margin-left: 100px;
     position: relative;
 }
-.conAside{
+
+.conAside {
     position: absolute;
     top: 0;
     left: 0px;
@@ -76,13 +89,15 @@ body{
     box-sizing: border-box;
     padding: 0 30px;
 }
-.conAside .item{
+
+.conAside .item {
     width: 100%;
-    border-bottom: 1px solid #2a3547; 
+    border-bottom: 1px solid #2a3547;
     box-sizing: border-box;
     padding: 16px 0;
 }
-.conAside .item h5{
+
+.conAside .item h5 {
     width: 100%;
     height: 50px;
     line-height: 50px;
@@ -90,7 +105,8 @@ body{
     font-weight: normal;
     color: #5b6779;
 }
-.conAside .item h5 i.settings{
+
+.conAside .item h5 i.settings {
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -98,19 +114,23 @@ body{
     margin-top: 14px;
     cursor: pointer;
 }
-.conAside .item ul{
+
+.conAside .item ul {
     width: 100%;
 }
-.conAside .item ul li{
+
+.conAside .item ul li {
     width: 100%;
     line-height: 36px;
     font-size: 14px;
     color: #b7c0cd;
 }
-.conAside .item ul li.active{
+
+.conAside .item ul li.active {
     color: #fff;
 }
-.conAside .item ul li i{
+
+.conAside .item ul li i {
     float: right;
     width: auto;
     height: 20px;
@@ -123,22 +143,26 @@ body{
     padding: 0 4px;
     margin-top: 8px;
 }
-.conAside .item ul li i.blue{
+
+.conAside .item ul li i.blue {
     background: #2298f1;
 }
-.conAside .item ul li i.red{
+
+.conAside .item ul li i.red {
     width: 20px;
     border-radius: 50%;
     background: #ea482d;
 }
-.conAside .speed_icon{
+
+.conAside .speed_icon {
     width: 250px;
     height: 32px;
     position: fixed;
     left: 100px;
     bottom: 20px;
 }
-.conAside .speed_icon p{
+
+.conAside .speed_icon p {
     width: 100%;
     line-height: 28px;
     font-size: 12px;
@@ -146,7 +170,8 @@ body{
     box-sizing: border-box;
     padding: 0 30px;
 }
-.conAside .speed_icon span{
+
+.conAside .speed_icon span {
     display: block;
     width: 190px;
     height: 4px;
@@ -155,20 +180,23 @@ body{
     border-radius: 2px;
     overflow: hidden;
 }
-.conAside .speed_icon span i{
+
+.conAside .speed_icon span i {
     display: block;
     width: 60px;
     height: 4px;
     background: #8e75e4;
 }
-.main{
+
+.main {
     width: calc(100% - 250px);
     height: 2000px;
     margin-left: 250px;
     position: relative;
     overflow: hidden;
 }
-.main .header{
+
+.main .header {
     width: calc(100% - 350px);
     margin-left: 350px;
     height: 80px;
@@ -179,7 +207,8 @@ body{
     z-index: 9;
     border-bottom: 1px solid #e6e9ec;
 }
-.main .header h2{
+
+.main .header h2 {
     display: inline-block;
     width: auto;
     height: 80px;
@@ -190,36 +219,42 @@ body{
     box-sizing: border-box;
     padding-left: 30px;
 }
-.head_info{
+
+.head_info {
     width: 200px;
     height: 80px;
     box-sizing: border-box;
     padding-right: 60px;
     padding-top: 25px;
 }
-.head_info img{
+
+.head_info img {
     float: left;
     width: 30px;
     height: 30px;
     background: #ececec;
     margin-right: 16px;
 }
-.head_info .name{
+
+.head_info .name {
     font-size: 14px;
     color: #2399f1;
     margin-bottom: 6px;
 }
-.head_info .int{
+
+.head_info .int {
     font-size: 12px;
     color: #d3d3d3;
 }
-.main .section{
+
+.main .section {
     width: 100%;
     height: 100%;
     margin-top: 80px;
     position: relative;
 }
-.secAside{
+
+.secAside {
     position: absolute;
     top: 0;
     left: 0;
@@ -227,7 +262,8 @@ body{
     height: 100%;
     border-right: 1px solid #e6e9ec;
 }
-.article{
+
+.article {
     width: calc(100% - 400px);
     height: 100%;
     margin-left: 400px;
