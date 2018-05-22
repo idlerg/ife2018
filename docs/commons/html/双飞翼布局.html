@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>淘宝-双飞翼布局</title>
+    <style>
+        #page {
+            min-width: 550px;
+            height: auto;   
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            line-height: 100px;
+            color: #fff;
+            text-align: center;
+        }
+
+        div {
+            height: 500px;
+        }
+
+        #hd,
+        #ft {
+            height: 100px;
+            background: #000;
+        }
+        .grid{
+            width: 100%;
+            background: lightblue;
+        }
+        /* 主列 */
+        .col-main {
+            float: left;
+            width: 100%;
+        }
+        
+        /* 子列 */
+        .col-sub {
+            float: left;
+            width: 190px;
+            margin-left: -100%;
+            background: lawngreen;
+        }
+
+        /* 附加列 */
+        .col-extra {
+            float: left;
+            width: 250px;
+            margin-left: -250px;
+            background: salmon;
+        }
+
+        .main-wrap {
+            margin-left: 190px;
+            margin-right: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+         双飞翼布局：
+        使主列main的div先加载 然后再加载子列和附加列
+        再不改变布局结构的情况下
+        使main显示在中间的位置
+    -->
+    <div id="page">
+        <div id="hd">
+            <h1>双飞翼布局</h1>
+        </div>
+        <div class="grid">
+            <div class="col-main">
+                <div class="main-wrap">
+                    我是主列，出来吧！
+                </div>
+            </div>
+            <div class="col-sub">
+                我是子列 <br />
+                    {     <br />
+                        float: left; <br />
+                        width: 190px; <br />
+                        margin-left: -100%; <br />
+                    }
+            </div>
+            <div class="col-extra">
+                我是附加列<br />
+                {     <br />
+                    float: left; <br />
+                    width: 250px; <br />
+                    margin-left: -250px; <br />
+                }
+            </div>
+        </div>
+        <div id="ft">尾部</div>
+    </div>
+
+</body>
+
+</html>

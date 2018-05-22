@@ -197,6 +197,7 @@ section .main {
 }
 
 .box2 .item5 .left {
+    width: 200px;
     flex: 0 0 auto;
     background: lavenderblush;
 }
