@@ -156,10 +156,11 @@ body {
 
 .conAside .speed_icon {
     width: 250px;
-    height: 32px;
+    height: 60px;
     position: fixed;
     left: 100px;
-    bottom: 20px;
+    bottom: 0px;
+    background: #222c3c;
 }
 
 .conAside .speed_icon p {
@@ -224,8 +225,10 @@ body {
     width: 200px;
     height: 80px;
     box-sizing: border-box;
-    padding-right: 60px;
     padding-top: 25px;
+    position: absolute;
+    top: 0;
+    right: 0px;
 }
 
 .head_info img {
