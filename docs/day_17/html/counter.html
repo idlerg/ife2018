@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>计算器</title>
+</head>
+<body>        
+    <input id="first-number" type="number" value="" placeholder="第一个数字">
+    <input id="second-number" type="number" value="" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        //输入框
+        var firstNumber = document.querySelector('#first-number');
+        var secondNumber = document.querySelector('#second-number');
+
+        var oAdd = document.querySelector('#add-btn');
+        var oMinus = document.querySelector('#minus-btn');
+        var oTimes = document.querySelector('#times-btn');
+        var oDivide = document.querySelector('#divide-btn');
+        
+        var result 	= document.querySelector('#result');
+
+        oAdd.addEventListener('click',addClick);
+        oMinus.addEventListener('click',minusClick);
+        oTimes.addEventListener('click',timesClick);
+        oDivide.addEventListener('click',divideClick);
+        
+        /*
+        //加法
+        function addClick(a,b) {    
+        	a = Number(firstNumber.value);
+        	b = Number(secondNumber.value);
+        	result.textContent = a + b;       	
+        }
+        
+        //减法
+        function minusClick(a,b){
+        	a = Number(firstNumber.value);
+        	b = Number(secondNumber.value);
+        	result.textContent = a - b;   
+        }
+        
+        //乘法
+        function timesClick(a,b){
+        	a = Number(firstNumber.value);
+        	b = Number(secondNumber.value);
+        	result.textContent = a * b;   
+        }
+        
+        //除法
+        function divideClick(a,b){
+        	a = Number(firstNumber.value);
+        	b = Number(secondNumber.value);
+        	result.textContent = a / b;   
+        }
+        
+        */
+       
+       	/*
+       	function number(){
+       		//return 多个值       	
+        	var obj = {
+        		a: Number(firstNumber.value),
+        		b: Number(secondNumber.value)
+        	}
+        	return obj;      	
+       	}
+       	*/
+       
+       //改进     
+       function number(a,b){  	
+        	a = Number(firstNumber.value);
+        	b = Number(secondNumber.value);       	
+        	return {a:a,b:b}
+       }
+       
+       
+       //加法
+        function addClick() { 
+        	var num = number();
+        	result.textContent = num.a + num.b;       	
+        }
+        
+        //减法
+        function minusClick(a,b){
+        	var num = number();
+        	result.textContent = num.a - num.b;    
+        }
+        
+        //乘法
+        function timesClick(a,b){
+        	var num = number();
+        	result.textContent = num.a * num.b;  
+        }
+        
+        //除法
+        function divideClick(a,b){
+        	var num = number();
+        	result.textContent = num.a / num.b;  
+        }
+       
+       
+    </script>
+</body>
+</html>

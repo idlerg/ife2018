@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Number Game</title>
+    <script src="../js/game.js"></script>
+</head>
+<body>
+    <h1>猜数字游戏</h1>
+    <p>我们在1~100之间选择了一个随机数。看看你能猜到需要10次或更少。如果你猜的太高或太低，我会告诉你。</p>
+    <div class="form">
+        <label for="guessField">请输入你猜测的数字: </label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" value="提交" class="guessSubmit">
+    </div>
+    <div class="resultParas">
+        <!-- 猜测提示 -->
+        <p class="guesses"></p>
+        <!-- 猜测正确的文本提示 -->
+        <p class="lastResult"></p>
+        <!-- 猜测错误的文本提示 -->
+        <p class="lowOrHi"></p>
+    </div>
+</body>
+</html>
