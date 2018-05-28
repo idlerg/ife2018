@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Number Game</title>
     <script src="../js/game.js"></script>
+    <style>
+        .main {
+            width: 600px;
+            height: 600px;
+            margin: 60px auto 0;
+            background: gainsboro;
+            box-sizing: border-box;
+            padding: 0 40px 40px;
+        }
+
+        h1 {
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .tip {
+            line-height: 30px;
+            color: salmon;
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            height: 34px;
+            line-height: 34px;
+            box-sizing: border-box;
+            padding: 0 16px;
+        }
+
+        input[type="submit"] {
+            width: 80px;
+            height: 34px;
+            line-height: 34px;
+            cursor: pointer;
+        }
+
+        .lastResult {
+            line-height: 38px;
+            color: red;
+        }
+
+        .lowOrHi {
+            text-align: center;
+            font-size: 28px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>猜数字游戏</h1>
-    <p>我们在1~100之间选择了一个随机数。看看你能猜到需要10次或更少。如果你猜的太高或太低，我会告诉你。</p>
-    <div class="form">
-        <label for="guessField">请输入你猜测的数字: </label>
-        <input type="text" id="guessField" class="guessField">
-        <input type="submit" value="提交" class="guessSubmit">
-    </div>
-    <div class="resultParas">
-        <!-- 猜测提示 -->
-        <p class="guesses"></p>
-        <!-- 猜测正确的文本提示 -->
-        <p class="lastResult"></p>
-        <!-- 猜测错误的文本提示 -->
-        <p class="lowOrHi"></p>
+    <div class="main">
+        <h1>猜数字游戏</h1>
+        <p class="tip">我们在1~100之间选择了一个随机数。看看你能猜到需要10次或更少。如果你猜的太高或太低，我会告诉你。</p>
+        <div class="form">
+            <label for="guessField">请输入你猜测的数字: </label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" value="提交" class="guessSubmit">
+        </div>
+        <div class="resultParas">
+            <!-- 猜测提示 -->
+            <p class="guesses"></p>
+            <!-- 猜测正确的文本提示 -->
+            <p class="lastResult"></p>
+            <!-- 猜测错误的文本提示 -->
+            <p class="lowOrHi"></p>
+        </div>
     </div>
 </body>
+
 </html>

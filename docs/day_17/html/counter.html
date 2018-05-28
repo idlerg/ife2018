@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>计算器</title>
+    <style>
+        h2 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .main {
+            width: 200px;
+            margin: 50px auto;
+        }
+
+        .main input[type='number'] {
+            width: 100%;
+            height: 36px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 0 16px;
+        }
+
+        .main button {
+            display: inline-block;
+            width: 48%;
+            height: 38px;
+            margin-bottom: 10px;
+            padding: 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>        
-    <input id="first-number" type="number" value="" placeholder="第一个数字">
-    <input id="second-number" type="number" value="" placeholder="第二个数字">
-    <button id="add-btn">加</button>
-    <button id="minus-btn">减</button>
-    <button id="times-btn">乘</button>
-    <button id="divide-btn">除</button>
-    <p id="result">运算结果</p>
+
+<body>
+    <h2>加减乘除计算器</h2>
+    <div class="main">
+        <input id="first-number" type="number" value="" placeholder="第一个数字">
+        <input id="second-number" type="number" value="" placeholder="第二个数字">
+        <button id="add-btn">加</button>
+        <button id="minus-btn">减</button>
+        <button id="times-btn">乘</button>
+        <button id="divide-btn">除</button>
+        <p id="result">运算结果</p>
+    </div>
+
     <script>
         //输入框
         var firstNumber = document.querySelector('#first-number');
@@ -22,14 +56,14 @@
         var oMinus = document.querySelector('#minus-btn');
         var oTimes = document.querySelector('#times-btn');
         var oDivide = document.querySelector('#divide-btn');
-        
-        var result 	= document.querySelector('#result');
 
-        oAdd.addEventListener('click',addClick);
-        oMinus.addEventListener('click',minusClick);
-        oTimes.addEventListener('click',timesClick);
-        oDivide.addEventListener('click',divideClick);
-        
+        var result = document.querySelector('#result');
+
+        oAdd.addEventListener('click', addClick);
+        oMinus.addEventListener('click', minusClick);
+        oTimes.addEventListener('click', timesClick);
+        oDivide.addEventListener('click', divideClick);
+
         /*
         //加法
         function addClick(a,b) {    
@@ -60,8 +94,8 @@
         }
         
         */
-       
-       	/*
+
+        /*
        	function number(){
        		//return 多个值       	
         	var obj = {
@@ -71,40 +105,46 @@
         	return obj;      	
        	}
        	*/
-       
-       //改进     
-       function number(a,b){  	
-        	a = Number(firstNumber.value);
-        	b = Number(secondNumber.value);       	
-        	return {a:a,b:b}
-       }
-       
-       
-       //加法
-        function addClick() { 
-        	var num = number();
-        	result.textContent = num.a + num.b;       	
+
+        //改进     
+        function number(a, b) {
+            a = Number(firstNumber.value);
+            b = Number(secondNumber.value);
+            if (a != '' && b != '') {
+                return {
+                    a: a,
+                    b: b
+                }
+            } else {
+                alert('请输入有效的数字')
+            }
         }
-        
+
+
+        //加法
+        function addClick() {
+            var num = number();
+            result.textContent = num.a + num.b;
+        }
+
         //减法
-        function minusClick(a,b){
-        	var num = number();
-        	result.textContent = num.a - num.b;    
+        function minusClick(a, b) {
+            var num = number();
+            result.textContent = num.a - num.b;
         }
-        
+
         //乘法
-        function timesClick(a,b){
-        	var num = number();
-        	result.textContent = num.a * num.b;  
+        function timesClick(a, b) {
+            var num = number();
+            result.textContent = num.a * num.b;
         }
-        
+
         //除法
-        function divideClick(a,b){
-        	var num = number();
-        	result.textContent = num.a / num.b;  
+        function divideClick(a, b) {
+            var num = number();
+            result.textContent = num.a / num.b;
         }
-       
-       
     </script>
 </body>
+
 </html>

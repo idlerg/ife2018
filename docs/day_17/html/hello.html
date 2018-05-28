@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>问候语</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background: lightblue;
+        }
+
+        .hello {
+            width: 100%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 60px;
+            color: lemonchiffon;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="hello"></p>
+    <script>
+        var hello = document.querySelector('.hello');
+        //获取时间戳的方法
+        //var time1 = Date.parse(new Date());
+        //var time2 = (new Date()).valueOf();
+        //var time = new Date().getTime();
+        //console.log(time1)
+        //console.log(time2)
+
+        //获取当前时间的方法
+        var date = new Date();
+
+        //年月日
+        //var y = date.getFullYear();
+        //var m = date.getMonth() + 1;
+        //var d = date.getDate();
+        //时
+        var h = date.getHours();
+        //分秒
+        //var min = date.getMinutes();
+        //var s = date.getSeconds()
+
+        if (h > 4 && h <= 10) {
+            hello.innerHTML = 'Hi,早上好！！！</p><p>一日之计在于晨，一年之计在于春！</p>';
+        } else if (h > 10 && h <= 16) {
+            hello.innerHTML = 'Hi,中午好！！！</p><p>中午不睡，下午奔溃！</p>';
+        } else if (h > 14 && h < 22) {
+            hello.innerHTML = 'Hi,晚上好！！！</p><p>早睡早起身体好！</p>';
+        } else {
+            hello.innerHTML = '我是周公，来来聊聊天！！！';
+        }
+    </script>
+</body>
+
+</html>

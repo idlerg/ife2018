@@ -17,4 +17,4 @@ ife百度学习第七、八学习布局[布局1](https://betrayalfan.github.io/i
 
 [ife百度学习第十六天JS的乐趣](https://betrayalfan.github.io/ife2018/day_16/html/index.html)
 
-[]()
+[ife百度学习第十七“如果”可以“重来”](https://betrayalfan.github.io/ife2018/day_17/html/index.html)

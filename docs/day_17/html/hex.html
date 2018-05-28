@@ -1,60 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>进制转换</title>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>进制转换</title>
+	<style>
+		h2 {
+			text-align: center;
+			margin-top: 60px;
+		}
 
-	<body>
+		.main {
+			width: 200px;
+			margin: 60px auto;
+
+		}
+
+		input[type='number'] {
+			width: 100%;
+			height: 34px;
+			box-sizing: border-box;
+			padding: 0 16px;
+		}
+
+		button {
+			width: 100%;
+			margin-top: 16px;
+		}
+
+		span {
+			font-weight: bold;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>十进制转二进制</h2>
+	<div class="main">
 		<input id="dec-number" type="number" value="" placeholder="输入一个十进制非负整数">
 		<button id="trans-btn">转化为二进制</button>
 		<p id="result">运算结果</p>
-		<script>
-			/*
-			 * 要求
-			 * 1 输入的是非负十进制整数
-			 * 2 通过除2取余的方式转换为二进制数
-			 * */
+	</div>
+	<script>
+		/*
+		 * 要求
+		 * 1 输入的是非负十进制整数
+		 * 2 通过除2取余的方式转换为二进制数
+		 * */
 
-			var transBtn = document.querySelector('#trans-btn');
-			var result = document.querySelector('#result');
-			var num;
+		var transBtn = document.querySelector('#trans-btn');
+		var result = document.querySelector('#result');
+		var num;
 
-			transBtn.addEventListener('click', dec2bin);
+		transBtn.addEventListener('click', dec2bin);
 
-			function dec2bin() {
-				//每次开始前清空上次的结果
-				result.textContent = '';
+		function dec2bin() {
+			//每次开始前清空上次的结果
+			result.textContent = '';
 
-				// 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
-				num = document.querySelector('#dec-number').value;
+			// 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+			num = document.querySelector('#dec-number').value;
 
-				//定义一个新的数组 保持余数
-				var arr = new Array();
-				var hex = '';
+			//定义一个新的数组 保持余数
+			var arr = new Array();
+			var hex = '';
 
-				if(/^[1-9]\d*$/.test(num)) {
+			if (/^[1-9]\d*$/.test(num)) {
 
-					for(var i = 0; 1; i++) {
-						if(num / 2 >= 1) {
-							arr[i] = num % 2;
-							num = parseInt(num / 2)
-						} else {
-							arr[i] = 1;
-							break;
-						}
+				for (var i = 0; 1; i++) {
+					if (num / 2 >= 1) {
+						arr[i] = num % 2;
+						num = parseInt(num / 2)
+					} else {
+						arr[i] = 1;
+						break;
 					}
-					for(i = arr.length; i > 0; i--) {
-						hex += arr[i - 1]
-						result.textContent = document.querySelector('#dec-number').value + '的二进制数为' + hex;
-						console.log(hex);
-					}
-				} else {
-					alert('请输入正整数');
 				}
+
+				for (i = arr.length; i > 0; i--) {
+					hex += arr[i - 1]
+					result.innerHTML = document.querySelector('#dec-number').value + ' 的二进制数为： <span>' + hex + '</span>';
+					console.log(hex);
+				}
+			} else {
+				alert('请输入正整数');
 			}
-		</script>
-	</body>
+		}
+	</script>
+</body>
 
 </html>
